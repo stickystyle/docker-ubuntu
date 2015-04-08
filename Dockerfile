@@ -13,10 +13,7 @@ ADD aptproxy.sh /usr/local/bin/
 ADD 31autoproxy /etc/apt/apt.conf.d/
 
 RUN apt-get -y --no-install-recommends install \
-    git \
-    python-pip \
-    software-properties-common \
-    build-essential
+    software-properties-common
 
 RUN apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*
